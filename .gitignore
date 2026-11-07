@@ -72,3 +72,16 @@ yarn-error.log*
 
 # Python
 venv
+
+/target/
+/data/*
+!/data/.gitkeep
+/artifacts/
+/web/node_modules/
+/web/dist/
+/web/test-results/
+/web/playwright-report/
+/PLAN.md
+
+# Local pnpm store
+.pnpm-store/

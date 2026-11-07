@@ -1,0 +1,16 @@
+{
+  "name": "Robbins scientific signed east",
+  "domain": "signed",
+  "direction": "east",
+  "latitude_type": "planetocentric",
+  "id_column": "crater_id",
+  "latitude_column": "latitude_deg",
+  "longitude_column": "longitude_deg",
+  "diameter_column": "diameter_km",
+  "depth_column": "depth_km",
+  "evidence": "Robbins (2019), Table 1: positive-east longitude, -180 to +180. Derived dataset card declares planetocentric latitude. Derived file lineage is not independently verified.",
+  "documentation": {
+    "longitude_domain": "unsigned",
+    "id_type": "INT64"
+  }
+}

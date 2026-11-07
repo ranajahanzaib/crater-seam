@@ -1,0 +1,11 @@
+{
+  "source_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+  "resource": "https://svs.gsfc.nasa.gov/4720/",
+  "credit": "NASA SVS / Ernie Wright / NASA Goddard / LROC",
+  "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170",
+  "width": 2048,
+  "height": 1024,
+  "central_meridian": 0,
+  "orientation": "north up, east right",
+  "recorded_at": "2026-11-02T12:34:40.606Z"
+}

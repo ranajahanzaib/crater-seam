@@ -1,0 +1,103 @@
+{
+  "engine_version": "0.1.0",
+  "profile": {
+    "name": "Robbins scientific signed east",
+    "domain": "signed",
+    "direction": "east",
+    "latitude_type": "planetocentric",
+    "id_column": "crater_id",
+    "latitude_column": "latitude_deg",
+    "longitude_column": "longitude_deg",
+    "diameter_column": "diameter_km",
+    "depth_column": "depth_km",
+    "evidence": "Robbins (2019), Table 1: positive-east longitude, -180 to +180. Derived dataset card declares planetocentric latitude. Derived file lineage is not independently verified.",
+    "documentation": {
+      "longitude_domain": "unsigned",
+      "id_type": "INT64"
+    }
+  },
+  "schema": [
+    {
+      "name": "crater_id",
+      "physical_type": "BYTE_ARRAY",
+      "logical_type": "Some(String)",
+      "null_count": 0
+    },
+    {
+      "name": "latitude_deg",
+      "physical_type": "DOUBLE",
+      "logical_type": "None",
+      "null_count": 0
+    },
+    {
+      "name": "longitude_deg",
+      "physical_type": "DOUBLE",
+      "logical_type": "None",
+      "null_count": 0
+    },
+    {
+      "name": "diameter_km",
+      "physical_type": "DOUBLE",
+      "logical_type": "None",
+      "null_count": 0
+    },
+    {
+      "name": "depth_km",
+      "physical_type": "DOUBLE",
+      "logical_type": "None",
+      "null_count": 317433
+    },
+    {
+      "name": "size_class",
+      "physical_type": "BYTE_ARRAY",
+      "logical_type": "Some(String)",
+      "null_count": 0
+    }
+  ],
+  "summary": {
+    "total": 384278,
+    "accepted": 384277,
+    "normalized": 0,
+    "review": 0,
+    "excluded": 1,
+    "valid_coordinates": 384277,
+    "affected_records": 1,
+    "duplicate_records": 0,
+    "rule_counts": {
+      "CONVENTION_METADATA_CONFLICT": 1,
+      "LATITUDE_OUT_OF_RANGE": 1,
+      "SCHEMA_TYPE_MISMATCH": 1
+    },
+    "latitude": {
+      "min": -105.383,
+      "max": 85.576,
+      "nulls": 0,
+      "malformed": 0,
+      "non_finite": 0
+    },
+    "longitude": {
+      "min": -179.997,
+      "max": 179.998,
+      "nulls": 0,
+      "malformed": 0,
+      "non_finite": 0
+    },
+    "latitude_histogram": [
+      1, 17, 621, 2278, 4747, 6092, 7438, 8997, 9702, 11609, 13716, 15578,
+      18989, 21717, 24792, 23849, 22301, 20220, 20701, 16489, 15875, 15550,
+      14864, 15020, 13967, 12388, 10970, 8218, 5952, 5600, 5207, 4397, 3585,
+      1955, 832, 42, 2, 0
+    ],
+    "longitude_histogram": [
+      0, 9957, 10766, 8221, 6885, 5447, 5811, 6114, 6120, 7228, 8425, 9357,
+      10507, 13638, 12515, 10781, 12567, 14315, 15283, 14383, 14235, 14311,
+      14122, 12864, 11156, 10495, 11680, 12054, 11937, 11067, 11423, 10723,
+      10456, 10727, 9655, 9862, 9191, 0
+    ]
+  },
+  "significant_findings": {
+    "dataset:CONVENTION_METADATA_CONFLICT:{\"documented\":\"unsigned\",\"observed\":{\"malformed\":0,\"max\":179.998,\"min\":-179.997,\"non_finite\":0,\"nulls\":0},\"selected\":\"signed\"}": "warning",
+    "dataset:SCHEMA_TYPE_MISMATCH:{\"logical_type\":\"Some(String)\",\"name\":\"crater_id\",\"null_count\":0,\"physical_type\":\"BYTE_ARRAY\"}": "warning",
+    "record:12-1-09489:LATITUDE_OUT_OF_RANGE:-105.383:This latitude is physically impossible. It is excluded without correction; this finding concerns the derived file, not proof of an error in the original Robbins catalog.": "critical"
+  }
+}

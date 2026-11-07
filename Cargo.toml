@@ -1,0 +1,13 @@
+[workspace]
+members = ["crates/craterseam"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Audit and visualize planetary coordinate convention interoperability"
+repository = "https://github.com/ranajahanzaib/crater-seam"
+readme = "README.md"
+keywords = ["planetary-science", "coordinates", "parquet", "astronomy", "data-quality"]
+categories = ["science", "command-line-utilities", "visualization"]

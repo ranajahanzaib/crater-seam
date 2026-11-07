@@ -1,0 +1,148 @@
+{
+  "profile": {
+    "depth_column": "depth_km",
+    "diameter_column": "diameter_km",
+    "direction": "east",
+    "documentation": {
+      "id_type": "INT64",
+      "longitude_domain": "unsigned"
+    },
+    "domain": "signed",
+    "evidence": "Robbins (2019), Table 1: positive-east longitude, -180 to +180. Derived dataset card declares planetocentric latitude. Derived file lineage is not independently verified.",
+    "id_column": "crater_id",
+    "latitude_column": "latitude_deg",
+    "latitude_type": "planetocentric",
+    "longitude_column": "longitude_deg",
+    "name": "Robbins scientific signed east"
+  },
+  "provenance": {
+    "acquired_at": "2026-11-02T12:24:00.562116+00:00",
+    "dataset_name": "Lunar Crater Database, Robbins-derived",
+    "row_count": 384278,
+    "schema": [
+      {
+        "logical_type": "Some(String)",
+        "name": "crater_id",
+        "null_count": 0,
+        "physical_type": "BYTE_ARRAY"
+      },
+      {
+        "logical_type": "None",
+        "name": "latitude_deg",
+        "null_count": 0,
+        "physical_type": "DOUBLE"
+      },
+      {
+        "logical_type": "None",
+        "name": "longitude_deg",
+        "null_count": 0,
+        "physical_type": "DOUBLE"
+      },
+      {
+        "logical_type": "None",
+        "name": "diameter_km",
+        "null_count": 0,
+        "physical_type": "DOUBLE"
+      },
+      {
+        "logical_type": "None",
+        "name": "depth_km",
+        "null_count": 317433,
+        "physical_type": "DOUBLE"
+      },
+      {
+        "logical_type": "Some(String)",
+        "name": "size_class",
+        "null_count": 0,
+        "physical_type": "BYTE_ARRAY"
+      }
+    ],
+    "sha256": "0b7365cdd8547915c2d79b0261e14b6e66efaa3d6ec12be25aabb352d40acd74",
+    "source_revision": "a6d08bfde1273a5e92fa34dbd584eafb6d667e8b",
+    "source_url": "https://huggingface.co/datasets/juliensimon/lunar-craters-robbins/resolve/a6d08bfde1273a5e92fa34dbd584eafb6d667e8b/data/lunar_craters.parquet"
+  },
+  "schema_findings": [
+    {
+      "automatic_normalization_safe": false,
+      "displayable": false,
+      "expected": "INT64",
+      "explanation": "The documented identifier type differs from the physical Parquet type. IDs are preserved without integer coercion.",
+      "original_value": {
+        "logical_type": "Some(String)",
+        "name": "crater_id",
+        "null_count": 0,
+        "physical_type": "BYTE_ARRAY"
+      },
+      "record_id": null,
+      "rule_id": "SCHEMA_TYPE_MISMATCH",
+      "severity": "warning",
+      "source_row": null,
+      "suggested_action": "Review the physical file against the documentation and scientific reference.",
+      "title": "SCHEMA TYPE MISMATCH"
+    },
+    {
+      "automatic_normalization_safe": false,
+      "displayable": false,
+      "expected": "documentation consistent with observed values and scientific source",
+      "explanation": "The published coordinate-domain claim conflicts with the observed range or the explicitly selected scientific profile. Ranges alone do not prove east/west direction.",
+      "original_value": {
+        "documented": "unsigned",
+        "observed": {
+          "malformed": 0,
+          "max": 179.998,
+          "min": -179.997,
+          "non_finite": 0,
+          "nulls": 0
+        },
+        "selected": "signed"
+      },
+      "record_id": null,
+      "rule_id": "CONVENTION_METADATA_CONFLICT",
+      "severity": "warning",
+      "source_row": null,
+      "suggested_action": "Review the physical file against the documentation and scientific reference.",
+      "title": "CONVENTION METADATA CONFLICT"
+    }
+  ],
+  "summary": {
+    "accepted": 384277,
+    "affected_records": 1,
+    "duplicate_records": 0,
+    "excluded": 1,
+    "latitude": {
+      "malformed": 0,
+      "max": 85.576,
+      "min": -105.383,
+      "non_finite": 0,
+      "nulls": 0
+    },
+    "latitude_histogram": [
+      1, 17, 621, 2278, 4747, 6092, 7438, 8997, 9702, 11609, 13716, 15578,
+      18989, 21717, 24792, 23849, 22301, 20220, 20701, 16489, 15875, 15550,
+      14864, 15020, 13967, 12388, 10970, 8218, 5952, 5600, 5207, 4397, 3585,
+      1955, 832, 42, 2, 0
+    ],
+    "longitude": {
+      "malformed": 0,
+      "max": 179.998,
+      "min": -179.997,
+      "non_finite": 0,
+      "nulls": 0
+    },
+    "longitude_histogram": [
+      0, 9957, 10766, 8221, 6885, 5447, 5811, 6114, 6120, 7228, 8425, 9357,
+      10507, 13638, 12515, 10781, 12567, 14315, 15283, 14383, 14235, 14311,
+      14122, 12864, 11156, 10495, 11680, 12054, 11937, 11067, 11423, 10723,
+      10456, 10727, 9655, 9862, 9191, 0
+    ],
+    "normalized": 0,
+    "review": 0,
+    "rule_counts": {
+      "CONVENTION_METADATA_CONFLICT": 1,
+      "LATITUDE_OUT_OF_RANGE": 1,
+      "SCHEMA_TYPE_MISMATCH": 1
+    },
+    "total": 384278,
+    "valid_coordinates": 384277
+  }
+}

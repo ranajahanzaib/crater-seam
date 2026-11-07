@@ -1,0 +1,23 @@
+crater_id,latitude_deg,longitude_deg,diameter_km,depth_km,extra
+normal,45,170,1,,retained
+west,0,90,2,,east under default
+minus-seam,0,-180,1,,seam
+plus-seam,0,180,1,,seam
+zero,-0,-0,1,,zero
+unsigned-boundary,0,360,1,,unsigned
+unsigned-near,0,359.9,1,,unsigned
+north,90,12,1,,pole
+south,-90,-12,1,,pole
+bad-south,-105.38,10,1,,impossible
+bad-north,95,10,1,,impossible
+missing-lat,,10,1,,missing
+missing-lon,0,,1,,missing
+nan,NaN,10,1,,not finite
+infinity,0,inf,1,,not finite
+malformed,banana,10,1,,not numeric
+duplicate,0,10,1,,one
+duplicate,1,11,1,,two
+domain-outside,0,180.0000000001,1,,strict
+near-left,0,-179.999,1,,near seam
+near-right,0,179.999,1,,near seam
+multiple,95,999,1,,two distinct findings
