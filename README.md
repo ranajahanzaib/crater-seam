@@ -4,7 +4,31 @@
 
 A local planetary coordinate debugger, built with Rust, Axum, React and Canvas. Load Parquet or CSV, audit the original values, simulate a strict importer, inspect every finding, and export a reproducible report. No accounts, paid services, database, or deployment required.
 
-![CraterSeam comparing the actual lunar dataset](docs/screenshot.png)
+![CraterSeam interactive dual-map inspection interface](docs/screenshots/overview.png)
+
+## Demonstration Gallery
+
+### Interactive Web Inspector
+
+|                                        Dual-Map Comparison & Audit                                        |                                               Interactive Crater Inspection                                                |
+| :-------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+|      [![CraterSeam Dual Map Overview](docs/screenshots/overview.png)](docs/screenshots/overview.png)      |     [![Walkthrough Crater Inspection](docs/screenshots/crater-inspection.png)](docs/screenshots/crater-inspection.png)     |
+| _Side-by-side comparison of naive importer omissions (left) vs validated scientific coordinates (right)._ | _Pinpointed crater `01-1-00003` (79.257° N, −148.095° E) showing zero physical movement despite naive importer rejection._ |
+
+|                                           Source & Schema Provenance Audit                                            |                                       Out-of-Range Latitude Defect Detection                                        |
+| :-------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| [![Source & Schema Audit Drawer](docs/screenshots/source-schema-audit.png)](docs/screenshots/source-schema-audit.png) | [![Physical Defect Inspection](docs/screenshots/out-of-range-defect.png)](docs/screenshots/out-of-range-defect.png) |
+|    _Inspects dataset card assertions, observed coordinate bounds, physical parquet schema, and sha256 checksums._     | _Filtering crater `12-1-09489` with impossible latitude −105.383° — cleanly flagged and excluded without clamping._ |
+
+|                                           West Direction Assumption Simulation                                            |                                     Synchronized Microscopic Zoom & Detail                                     |
+| :-----------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| [![Signed West Simulation](docs/screenshots/west-mirrored-simulation.png)](docs/screenshots/west-mirrored-simulation.png) |        [![Synchronized High Zoom](docs/screenshots/zoom-detail.png)](docs/screenshots/zoom-detail.png)         |
+|          _Simulated positive-west assumption highlighting mirrored crater locations across the prime meridian._           | _Deterministic viewport-level markers rendered smoothly over NASA LROC equirectangular lunar basemap texture._ |
+
+### CLI & Regression Verification Session
+
+![CraterSeam CLI Demonstration](docs/screenshots/cli-demo.gif)
+_Automated execution of `craterseam --help`, `craterseam check` against real baselines, and `craterseam audit` producing deterministic JSON and CSV artifacts._
 
 ## Why this dataset?
 
