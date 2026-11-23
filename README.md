@@ -160,11 +160,24 @@ A single Rust crate in a workspace has separate model, coordinates, ingestion, a
 
 This MVP uses an in-memory local dataset and linear record scans. It is sized for this 384k-row dataset, not an arbitrary-size service. Map density cells remain coarse at high zoom; real markers are deterministic samples. Longitude at the poles is rendered deterministically from the supplied value but does not define a unique physical direction. The selected source profile is an explicit interpretation supported by cited metadata, not independent scientific verification of every crater location or the derived processing pipeline. No terrain, geodetic body-model conversions, 3D rendering, or automatic east/west inference are implemented.
 
-## Attribution and license
+## Attribution
 
-Code: [MIT](LICENSE). Third-party data and imagery retain their own terms.
+Third-party data and imagery retain their own terms.
 
 - Dataset: Julien Simon, _Lunar Crater Database (Robbins 2019)_, [Hugging Face](https://huggingface.co/datasets/juliensimon/lunar-craters-robbins), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Normalized exports are transformations by CraterSeam; the original file is retained unchanged.
 - Scientific reference: Stuart J. Robbins (2019), _A New Global Database of Lunar Impact Craters >1–2 km: 1. Crater Locations and Sizes, Comparisons With Published Databases, and Global Analysis_, JGR: Planets, 124, 871–892, [doi:10.1029/2018JE005592](https://doi.org/10.1029/2018JE005592).
 - Basemap: [NASA Scientific Visualization Studio, CGI Moon Kit](https://svs.gsfc.nasa.gov/4720/), Ernie Wright / NASA Goddard / LROC. The 2048×1024 equirectangular image is centered at 0° longitude. Display applies grayscale, opacity, graticule and data overlays; it is not an unmodified scientific raster. See [NASA media usage guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/).
 - Coordinate guidance: [USGS planetary coordinate systems](https://planetarynames.wr.usgs.gov/TargetCoordinates), [USGS map projection concepts](https://astrogeology.usgs.gov/docs/concepts/camera-geometry-and-projections/learning-about-map-projections/), and [NASA PDS coordinate-system definitions](https://pds.nasa.gov/datastandards/documents/dd/all/current/ch37s22.html).
+
+
+## License & Custom Work
+
+[![Hire me](https://img.shields.io/badge/Open%20to%20work-work%40withrana.com-brightgreen)](mailto:work@withrana.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-workwithrana-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/workwithrana)
+[![Upwork](https://img.shields.io/badge/Upwork-Hire%20Me-14A800?style=flat&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/~01bbcf6edb91a8df5f)
+[![Contra](https://img.shields.io/badge/Contra-Hire%20Me-000000?style=flat)](https://contra.com/ranajahanzaib/)
+
+**License:** MIT, see [LICENSE](LICENSE). Free for personal and commercial use.
+
+**Author:** Rana Jahanzaib
+
+**Need this built for your stack?** Email me what you're working on: work@withrana.com
